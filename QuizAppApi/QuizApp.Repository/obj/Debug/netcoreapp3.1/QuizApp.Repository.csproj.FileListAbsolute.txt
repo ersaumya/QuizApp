@@ -1,0 +1,13 @@
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\bin\Debug\netcoreapp3.1\QuizApp.Repository.deps.json
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\bin\Debug\netcoreapp3.1\QuizApp.Repository.dll
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\bin\Debug\netcoreapp3.1\QuizApp.Repository.pdb
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\bin\Debug\netcoreapp3.1\QuizApp.Core.dll
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\bin\Debug\netcoreapp3.1\QuizApp.DomainModels.dll
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\bin\Debug\netcoreapp3.1\QuizApp.Core.pdb
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\bin\Debug\netcoreapp3.1\QuizApp.DomainModels.pdb
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\obj\Debug\netcoreapp3.1\QuizApp.Repository.csprojAssemblyReference.cache
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\obj\Debug\netcoreapp3.1\QuizApp.Repository.AssemblyInfoInputs.cache
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\obj\Debug\netcoreapp3.1\QuizApp.Repository.AssemblyInfo.cs
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\obj\Debug\netcoreapp3.1\QuizApp.Repository.csproj.CopyComplete
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\obj\Debug\netcoreapp3.1\QuizApp.Repository.dll
+F:\code\QuizApp\QuizAppApi\QuizApp.Repository\obj\Debug\netcoreapp3.1\QuizApp.Repository.pdb

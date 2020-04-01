@@ -1,0 +1,41 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Angular Question</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form>
+      <mat-form-field class="full-width">
+        <mat-label>Question</mat-label>
+        <input matInput [(ngModel)]="question.text" name="question" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Correct Answer</mat-label>
+        <input
+          matInput
+          [(ngModel)]="question.correctAnswer"
+          name="correctAnswer"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Answer 1</mat-label>
+        <input matInput [(ngModel)]="question.answer1" name="answer1" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Answer 2</mat-label>
+        <input matInput [(ngModel)]="question.answer2" name="answer2" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Answer 3</mat-label>
+        <input matInput [(ngModel)]="question.answer3" name="answer3" />
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button (click)="post(question)" mat-flat-button color="primary">
+      Post
+    </button>
+  </mat-card-actions>
+</mat-card>
+<mat-divider></mat-divider>
