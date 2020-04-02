@@ -1,7 +1,8 @@
 <mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>Angular Question</mat-card-title>
-  </mat-card-header>
+  <mat-card-title>
+    <span *ngIf="question.id">Edit Question</span>
+    <span *ngIf="!question.id">Add New Question</span>
+  </mat-card-title>
 
   <mat-card-content>
     <form>
@@ -33,9 +34,17 @@
   </mat-card-content>
 
   <mat-card-actions>
-    <button (click)="post(question)" mat-flat-button color="primary">
-      Post
-    </button>
+    <div class="example-button-row">
+      <button *ngIf="question.id" (click)="put(question)" mat-flat-button color="primary">
+        Edit
+      </button>
+      <button *ngIf="question.id" (click)="question = {}" mat-flat-button color="primary">
+        New
+      </button>
+      <button *ngIf="!question.id" (click)="post(question)" mat-flat-button color="primary">
+        Post
+      </button>
+    </div>
   </mat-card-actions>
 </mat-card>
 <mat-divider></mat-divider>

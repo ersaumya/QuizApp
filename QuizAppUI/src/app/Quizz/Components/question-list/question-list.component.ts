@@ -12,7 +12,7 @@ export class QuestionListComponent implements OnInit {
  
   questionList:Question[];
 
-  constructor(private questionService: QuestionService) { }
+  constructor(public questionService: QuestionService) { }
 
   ngOnInit(){
     this.questionService.getQuestions().subscribe(data=>{

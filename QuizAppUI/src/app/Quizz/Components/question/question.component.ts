@@ -10,13 +10,19 @@ import { Observable } from 'rxjs';
 })
 export class QuestionComponent implements OnInit {
   
-  question: Question={};
+  question:Question={};
 
   constructor(private questionService: QuestionService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.questionService.questionSelected.subscribe(question=>this.question=question);
+  }
 
   post(question) {
     this.questionService.postQuestion(question);
+  }
+
+  put(question){
+    this.questionService.editQuestion(question);
   }
 }

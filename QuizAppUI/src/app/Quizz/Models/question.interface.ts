@@ -1,4 +1,5 @@
 export interface Question{
+    id?:number,
     text?:string,
     correctAnswer?:string,
     answer1?:string,
