@@ -7,9 +7,8 @@ import { Question } from "../Models/question.interface";
   providedIn: "root"
 })
 export class QuestionService {
-
   private selectedQuestion = new Subject<any>();
-  questionSelected=this.selectedQuestion.asObservable();
+  questionSelected = this.selectedQuestion.asObservable();
 
   constructor(private http: HttpClient) {}
 
@@ -33,7 +32,15 @@ export class QuestionService {
       });
   }
 
-  selectQuestion(question){
+  postQuiz(quiz) {
+    this.http
+      .post("https://localhost:44398/api/quiz", quiz)
+      .subscribe(res => {
+        console.log(res);
+      });
+  }
+
+  selectQuestion(question) {
     this.selectedQuestion.next(question);
   }
 }

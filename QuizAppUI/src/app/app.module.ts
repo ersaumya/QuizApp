@@ -17,6 +17,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatListModule } from "@angular/material/list";
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { QuizComponent } from './quiz/quiz.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     QuestionListComponent,
     QuestionComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,
