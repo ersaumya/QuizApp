@@ -13,5 +13,6 @@ namespace QuizApp.Core.Data
 
         }
         public DbSet<Question> Questions { get; set; }
+        public DbSet<Quiz> Quizes { get; set; }
     }
 }

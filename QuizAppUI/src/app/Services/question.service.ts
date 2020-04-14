@@ -34,7 +34,7 @@ export class QuestionService {
 
   postQuiz(quiz) {
     this.http
-      .post("https://localhost:44398/api/quiz", quiz)
+      .post("https://localhost:44398/api/quizes", quiz)
       .subscribe(res => {
         console.log(res);
       });

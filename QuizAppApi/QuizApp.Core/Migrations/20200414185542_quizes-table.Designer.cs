@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QuizApp.Core.Data;
 
 namespace QuizApp.Core.Migrations
 {
     [DbContext(typeof(QuizAppContext))]
-    partial class QuizAppContextModelSnapshot : ModelSnapshot
+    [Migration("20200414185542_quizes-table")]
+    partial class quizestable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -5,4 +5,3 @@ F:\code\QuizApp\QuizAppApi\QuizApp.DomainModels\obj\Debug\netcoreapp3.1\QuizApp.
 F:\code\QuizApp\QuizAppApi\QuizApp.DomainModels\obj\Debug\netcoreapp3.1\QuizApp.DomainModels.AssemblyInfo.cs
 F:\code\QuizApp\QuizAppApi\QuizApp.DomainModels\obj\Debug\netcoreapp3.1\QuizApp.DomainModels.dll
 F:\code\QuizApp\QuizAppApi\QuizApp.DomainModels\obj\Debug\netcoreapp3.1\QuizApp.DomainModels.pdb
-F:\code\QuizApp\QuizAppApi\QuizApp.DomainModels\obj\Debug\netcoreapp3.1\QuizApp.DomainModels.csprojAssemblyReference.cache
