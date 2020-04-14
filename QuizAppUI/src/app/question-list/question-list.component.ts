@@ -20,5 +20,4 @@ export class QuestionListComponent implements OnInit {
       this.questionList=data
     });
   }
-
 }
