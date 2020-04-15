@@ -29,17 +29,11 @@ namespace QuizApp.Service.Controllers
         }
 
         // GET: api/Questions1/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Question>> GetQuestion(int id)
+        [HttpGet("{quizId}")]
+        public async Task<IEnumerable<Question>> GetQuestion([FromRoute]int quizId)
         {
-            var question = await _context.Questions.FindAsync(id);
-
-            if (question == null)
-            {
-                return NotFound();
-            }
-
-            return question;
+            return await _context.Questions.Where(q => q.QuizId == quizId).ToListAsync();
+   
         }
 
         [HttpPost]

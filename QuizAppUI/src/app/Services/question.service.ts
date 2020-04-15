@@ -16,8 +16,8 @@ export class QuestionService {
 
   constructor(private http: HttpClient) {}
 
-  getQuestions(): Observable<Question[]> {
-    return this.http.get<Question[]>("https://localhost:44398/api/questions");
+  getQuestions(quizId): Observable<Question[]> {
+    return this.http.get<Question[]>(`https://localhost:44398/api/questions/${quizId}`);
   }
 
   postQuestion(question) {
