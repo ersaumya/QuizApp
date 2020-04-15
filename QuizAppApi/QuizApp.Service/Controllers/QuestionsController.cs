@@ -39,6 +39,9 @@ namespace QuizApp.Service.Controllers
         [HttpPost]
         public async Task<ActionResult<Question>> Post([FromBody]Question question)
         {
+            var quiz = _context.Quizes.SingleOrDefault(q => q.Id == question.QuizId);
+            if (quiz == null)
+                return NotFound();
             _context.Questions.Add(question);
             await _context.SaveChangesAsync();
 
