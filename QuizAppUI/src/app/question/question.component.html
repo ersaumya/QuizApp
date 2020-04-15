@@ -35,16 +35,32 @@
 
   <mat-card-actions>
     <div class="example-button-row">
-      <button *ngIf="question.id" (click)="put(question)" mat-flat-button color="primary">
+      <button
+        *ngIf="question.id"
+        (click)="put(question)"
+        mat-flat-button
+        color="primary"
+      >
         Edit
       </button>
-      <button *ngIf="question.id" (click)="question = {}" mat-flat-button color="primary">
+      <button
+        *ngIf="question.id"
+        (click)="question = {}"
+        mat-flat-button
+        color="primary"
+      >
         New
       </button>
-      <button *ngIf="!question.id" (click)="post(question)" mat-flat-button color="primary">
+      <button
+        *ngIf="!question.id"
+        (click)="post(question)"
+        mat-flat-button
+        color="primary"
+      >
         Post
       </button>
     </div>
   </mat-card-actions>
 </mat-card>
 <mat-divider></mat-divider>
+<app-question-list></app-question-list>

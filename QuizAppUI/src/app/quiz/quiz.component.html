@@ -22,6 +22,9 @@
       <button *ngIf="quiz.id" (click)="quiz = {}" mat-flat-button color="primary">
         New
       </button>
+      <button *ngIf="quiz.id" routerLink="/question" mat-flat-button color="primary">
+        Edit Questions
+      </button>
       <button *ngIf="!quiz.id" (click)="post(quiz)" mat-flat-button color="primary">
         Post
       </button>
