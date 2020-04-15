@@ -16,10 +16,10 @@
 
   <mat-card-actions>
     <div class="example-button-row">
-      <button *ngIf="quiz.id" (click)="null" mat-flat-button color="primary">
+      <button *ngIf="quiz.id" (click)="put(quiz)" mat-flat-button color="primary">
         Edit
       </button>
-      <button *ngIf="quiz.id" (click)="null" mat-flat-button color="primary">
+      <button *ngIf="quiz.id" (click)="quiz = {}" mat-flat-button color="primary">
         New
       </button>
       <button *ngIf="!quiz.id" (click)="post(quiz)" mat-flat-button color="primary">

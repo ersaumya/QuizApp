@@ -44,6 +44,14 @@ export class QuestionService {
       });
   }
 
+  editQuiz(quiz) {
+    this.http
+      .put(`https://localhost:44398/api/quizes/${quiz.id}`, quiz)
+      .subscribe((res) => {
+        console.log(res);
+      });
+  }
+
   selectQuestion(question) {
     this.selectedQuestion.next(question);
   }
