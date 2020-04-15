@@ -1,29 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import { Observable } from 'rxjs';
-import { QuestionService } from '../Services/question.service';
-import { Question } from '../Models/question.interface';
+import { Observable } from "rxjs";
+import { QuestionService } from "../Services/question.service";
+import { Question } from "../Models/question.interface";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-question",
   templateUrl: "./question.component.html",
-  styleUrls: ["./question.component.css"]
+  styleUrls: ["./question.component.css"],
 })
 export class QuestionComponent implements OnInit {
-  
-  question:Question={};
+  question: Question = {};
+  quizId;
 
-  constructor(private questionService: QuestionService) {}
+  constructor(
+    private questionService: QuestionService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.questionService.questionSelected.subscribe(question=>this.question=question);
+    this.quizId = this.route.snapshot.paramMap.get("quizId");
+    this.questionService.questionSelected.subscribe(
+      (question) => (this.question = question)
+    );
   }
 
-  post(question) {
+  post(question:Question) {
+    question.quizId = JSON.parse(this.quizId);
     this.questionService.postQuestion(question);
   }
 
-  put(question){
+  put(question) {
     this.questionService.editQuestion(question);
   }
 }

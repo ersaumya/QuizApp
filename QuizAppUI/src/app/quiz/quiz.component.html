@@ -10,26 +10,44 @@
         <mat-label>Quiz Title</mat-label>
         <input matInput [(ngModel)]="quiz.title" name="title" />
       </mat-form-field>
-     
     </form>
   </mat-card-content>
 
   <mat-card-actions>
     <div class="example-button-row">
-      <button *ngIf="quiz.id" (click)="put(quiz)" mat-flat-button color="primary">
+      <button
+        *ngIf="quiz.id"
+        (click)="put(quiz)"
+        mat-flat-button
+        color="primary"
+      >
         Edit
       </button>
-      <button *ngIf="quiz.id" (click)="quiz = {}" mat-flat-button color="primary">
+      <button
+        *ngIf="quiz.id"
+        (click)="quiz = {}"
+        mat-flat-button
+        color="primary"
+      >
         New
       </button>
-      <button *ngIf="quiz.id" routerLink="/question" mat-flat-button color="primary">
+      <button
+        *ngIf="quiz.id"
+        [routerLink]="['/question', quiz.id]"
+        mat-flat-button
+        color="primary"
+      >
         Edit Questions
       </button>
-      <button *ngIf="!quiz.id" (click)="post(quiz)" mat-flat-button color="primary">
+      <button
+        *ngIf="!quiz.id"
+        (click)="post(quiz)"
+        mat-flat-button
+        color="primary"
+      >
         Post
       </button>
     </div>
   </mat-card-actions>
 </mat-card>
 <mat-divider></mat-divider>
-

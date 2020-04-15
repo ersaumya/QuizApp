@@ -8,8 +8,9 @@ import { QuizComponent } from "./quiz/quiz.component";
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "question", component: QuestionComponent },
+  { path: "question/:quizId", component: QuestionComponent },
   { path: "questionlist", component: QuestionListComponent },
-  { path: "quiz", component: QuizComponent }
+  { path: "quiz", component: QuizComponent },
 ];
 
 @NgModule({
