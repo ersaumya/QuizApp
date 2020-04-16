@@ -19,6 +19,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizListComponent } from './quiz-list/quiz-list.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { QuizListComponent } from './quiz-list/quiz-list.component';
     NavComponent,
     HomeComponent,
     QuizComponent,
-    QuizListComponent
+    QuizListComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -2,14 +2,14 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { QuestionComponent } from "./question/question.component";
 import { HomeComponent } from "./home/home.component";
-import { QuestionListComponent } from "./question-list/question-list.component";
 import { QuizComponent } from "./quiz/quiz.component";
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "question", component: QuestionComponent },
   { path: "question/:quizId", component: QuestionComponent },
-  { path: "questionlist", component: QuestionListComponent },
+  { path: "register", component: RegisterComponent },
   { path: "quiz", component: QuizComponent },
 ];
 
