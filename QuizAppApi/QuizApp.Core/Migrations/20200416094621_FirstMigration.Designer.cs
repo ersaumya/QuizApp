@@ -9,8 +9,8 @@ using QuizApp.Core.Data;
 namespace QuizApp.Core.Migrations
 {
     [DbContext(typeof(QuizAppContext))]
-    [Migration("20200415112914_quizid-added")]
-    partial class quizidadded
+    [Migration("20200416094621_FirstMigration")]
+    partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

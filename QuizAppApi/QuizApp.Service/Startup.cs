@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -32,7 +33,11 @@ namespace QuizApp.Service
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IQuestionRepository, QuestionRepository>();
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<UserDbContext>()
+                .AddDefaultTokenProviders();
+          
             services.AddDbContext<QuizAppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<UserDbContext>(options => options.UseInMemoryDatabase("user"));
             services.AddCors(options =>
             {
                 options.AddPolicy("specificdomain",
@@ -42,6 +47,8 @@ namespace QuizApp.Service
                     .AllowAnyMethod()
                     );
             });
+
+            
             services.AddControllers();
         }
 
